@@ -22,7 +22,7 @@ function getStateOfChat() {
         $.ajax({
             type: "POST",
             url: "process.php",
-            crossDomain:true,
+         
             headers: {  'Access-Control-Allow-Origin': '*' },
             data: {
                 'function': 'getState',
@@ -45,7 +45,7 @@ function updateChat() {
         $.ajax({
             type: "POST",
             url: "process.php",
-            crossDomain:true,
+          
             headers: {  'Access-Control-Allow-Origin': '*' },
             data: {
                 'function': 'update',
@@ -75,7 +75,7 @@ function sendChat(message, nickname) {
     $.ajax({
         type: "POST",
         url: "process.php",
-        crossDomain:true,
+        crossDomain:
         headers: {  'Access-Control-Allow-Origin': '*' },
         data: {
             'function': 'send',
