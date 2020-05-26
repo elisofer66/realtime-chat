@@ -23,6 +23,7 @@ function getStateOfChat() {
             type: "POST",
             url: "process.php",
             crossDomain:true,
+            headers: {  'Access-Control-Allow-Origin': '*' },
             data: {
                 'function': 'getState',
                 'file': file
@@ -45,6 +46,7 @@ function updateChat() {
             type: "POST",
             url: "process.php",
             crossDomain:true,
+            headers: {  'Access-Control-Allow-Origin': '*' },
             data: {
                 'function': 'update',
                 'state': state,
@@ -74,6 +76,7 @@ function sendChat(message, nickname) {
         type: "POST",
         url: "process.php",
         crossDomain:true,
+        headers: {  'Access-Control-Allow-Origin': '*' },
         data: {
             'function': 'send',
             'message': message,
