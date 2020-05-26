@@ -22,7 +22,7 @@ function getStateOfChat() {
         $.ajax({
             type: "POST",
             url: "process.php",
-
+            crossDomain:true,
             data: {
                 'function': 'getState',
                 'file': file
@@ -42,9 +42,9 @@ function updateChat() {
     if (!instanse) {
         instanse = true;
         $.ajax({
-
             type: "POST",
             url: "process.php",
+            crossDomain:true,
             data: {
                 'function': 'update',
                 'state': state,
@@ -72,8 +72,8 @@ function sendChat(message, nickname) {
     updateChat();
     $.ajax({
         type: "POST",
-
         url: "process.php",
+        crossDomain:true,
         data: {
             'function': 'send',
             'message': message,
